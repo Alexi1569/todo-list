@@ -163,12 +163,21 @@ router.post('/login', upload.none(), async (req, res) => {
     const err = new Error();
     err.errors = {};
     let errorsCount = 0;
+    let user = null;
 
-    let user = await findUserByEmail(email, true)
-      .then(res => {
-        return res;
-      })
-      .catch(err => console.log('err', err));
+    if (email.trim().length === 0) {
+      err.errors['email'] = {
+        message: 'Email must be filled'
+      };
+
+      errorsCount++;
+    } else {
+      user = await findUserByEmail(email, true)
+        .then(res => {
+          return res;
+        })
+        .catch(err => console.log('err', err));
+    }
 
     if (user === false) {
       err.errors['email'] = {
@@ -177,7 +186,7 @@ router.post('/login', upload.none(), async (req, res) => {
       errorsCount++;
     }
 
-    if (user !== false) {
+    if (user !== false && user !== null) {
       let isEqual = await bcrypt.compare(password, user.password);
 
       if (isEqual === false) {

@@ -18,7 +18,7 @@ const upload = multer({
     const ext = path.extname(file.originalname);
 
     if (ext !== '.png' && ext !== '.jpg' && ext !== '.jpeg') {
-      req.uploadError = 'Only images allowed';
+      req.uploadError = 'Only images allowed (png, jpg, jpeg)';
       cb(null, false);
     }
 
