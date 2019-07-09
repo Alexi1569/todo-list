@@ -1,0 +1,29 @@
+@import '../../variables'
+
+.footer
+  padding: .5rem 0
+  border-top: 1px solid darken($light, 2%)
+  &__copyright
+    font-size: .8em
+    text-align: center
+    color: $gray
+    a
+      color: $accent
+      border-bottom: 1px solid $accent
+      text-decoration: none
+  &__line
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+@media screen and (max-width: 550px)
+  .footer__line
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+  .footer__copyright
+    margin-top: 1rem
+  .footer--socials
+    margin-top: .8rem
+  .footer
+    padding: 1.25rem 0

@@ -1,0 +1,9 @@
+export const CREATE_USER = 'CREATE_USER';
+export const GET_USER = 'GET_USER';
+export const TOGGLE_AUTH_SPINNER = 'TOGGLE_SPINNER';
+export const TOGGLE_MODAL_TASKS_SPINNER = 'TOGGLE_MODAL_TASKS_SPINNER';
+export const TOGGLE_TASKS_SPINNER = 'TOGGLE_TASKS_SPINNER';
+export const LOGOUT = 'LOGOUT';
+export const CREATE_TASK = 'CREATE_TASK';
+export const EDIT_TASK = 'EDIT_TASK';
+export const DELETE_TASK = 'DELETE_TASK';

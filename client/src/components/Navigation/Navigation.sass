@@ -1,0 +1,50 @@
+@import '../../variables'
+
+.header__nav
+  font-size: .95em
+  ul
+    display: flex
+    align-items: center
+    justify-content: flex-end
+  li
+    &:not(:last-of-type)
+      margin-right: 1.9rem
+  a
+    text-decoration: none
+    color: inherit
+  p
+    cursor: pointer
+
+@media screen and (max-width: 450px)
+  .header__nav
+    position: fixed
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    transform: translateX(30%) translate3d(0, 0, 0)
+    transition: .25s all ease-in
+    background-color: $dark
+    z-index: 5
+    opacity: 0
+    visibility: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+    &.active
+      opacity: 1
+      visibility: visible
+      transform: translateX(0%) translate3d(0, 0, 0)
+    ul
+      flex-direction: column
+      justify-content: flex-start
+      align-items: center
+      li
+        margin-right: 0
+        margin-bottom: 1.2rem
+        text-transform: uppercase
+        font-size: 1.3em
+        &:not(:last-of-type)
+          margin-right: 0
+        &:last-of-type
+          margin-bottom: 0

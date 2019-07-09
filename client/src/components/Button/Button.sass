@@ -1,0 +1,35 @@
+@import '../../variables'
+
+.btn
+  border: 0
+  display: inline-block
+  font-family: inherit
+  font-weight: 500
+  text-align: center
+  padding: .9rem 1.5rem
+  letter-spacing: 0.05em
+  text-transform: uppercase
+  transition: .25s all ease-in
+  &.btn--icon
+    background-color: $blue
+    border-radius: 50%
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    svg
+      fill: #fff
+  &.btn--danger
+    background-color: $red
+  &.btn--form
+    margin-top: 1.6rem
+  &.btn--link
+    background-color: transparent
+    color: $accent
+    border-bottom: 1px solid $accent
+    font-weight: 700
+    padding: 0 0 5px
+  &.btn--accent
+    background-color: $accent
+    color: #ffffff
+    &:hover
+      background-color: darken($accent, 5%)

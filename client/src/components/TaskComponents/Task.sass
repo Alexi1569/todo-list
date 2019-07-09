@@ -1,0 +1,57 @@
+@import '../../variables'
+
+.task
+  text-align: left
+  background-color: #ffffff
+  box-shadow: 0px 0px 3px 2px rgba($dark, .1)
+  border-radius: 2px
+  padding: 1.4rem 1.4rem .7rem
+  width: calc(33.33% - 30px)
+  margin: 0 15px 30px
+  &__actions
+    display: inline-flex
+    justify-content: flex-end
+    .btn.btn--icon
+      padding: 8px
+      svg
+        width: 18px
+        height: 18px
+      &:not(:last-of-type)
+        margin-right: .5rem
+  &__bottom
+    border-top: 1px solid $light
+    padding-top: .7rem
+    margin-top: .7rem
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &.task--finished
+    .task__status
+      color: $red
+  &__title
+    font-weight: 700
+    text-transform: uppercase
+    font-size: 1.25em
+    letter-spacing: 0.05em
+  &__description
+    font-size: .9em
+    color: $gray
+    line-height: 1.35
+    margin-top: .4rem
+  &__status
+    color: $green
+    font-size: .75em
+    text-transform: uppercase
+    font-weight: 700
+
+@media screen and (max-width: 850px)
+  .task
+    width: calc(50% - 30px)
+    &__title
+      font-size: 1em
+
+@media screen and (max-width: 550px)
+  .task
+    width: 100%
+    margin-left: 0
+    margin-right: 0

@@ -1,0 +1,148 @@
+@import '../../variables'
+
+.form
+  text-align: center
+  max-width: 100%
+  width: 500px
+  margin: 0 auto
+  &.form--bg
+    padding: 2.5rem
+    background-color: #fff
+    box-shadow: 0px 0px 18px 6px rgba($dark, 0.04)
+    .form__group-input input,
+    .form__group-input textarea
+      background-color: $light
+  &__toggler
+    font-size: .85em
+    cursor: pointer
+    margin-top: 1.3rem
+    font-weight: 500
+    color: $blue
+  &__caption
+    font-size: 1.4em
+    font-weight: 700
+  &__inputs
+    margin-top: 2.1rem
+  &__group
+    text-align: left
+    position: relative
+    &.form__group--textarea
+      .form__group-input
+        height: 150px
+    &-message
+      color: $red
+      font-size: 13px
+      margin-top: 8px
+      &:first-letter
+        text-transform: uppercase
+    &.form__group--file
+      &.loaded
+        span
+          color: $accent
+      input
+        position: absolute
+        left: 0
+        top: 0
+        bottom: 0
+        cursor: pointer
+        right: 0
+        opacity: 0
+      .form__group-input
+        background-color: #ffffff
+      span
+        font-size: 14px
+        transition: .25s all ease-in
+        color: $gray
+        cursor: pointer
+        display: block
+        padding: .8rem 1.2rem
+
+
+    &:not(:last-of-type)
+      margin-bottom: 1.4rem
+    label
+      display: block
+      color: $dark
+      font-weight: 500
+    &-input
+      margin-top: .6rem
+      input, textarea
+        border: 0px
+        padding: .8rem 1.2rem
+        background-color: #fff
+        width: 100%
+      textarea
+        height: 100%
+
+input,
+textarea
+  font-family: inherit
+  font-size: 14px
+  color: $dark
+  transition: .25s all ease-in
+  &:focus
+    box-shadow: 0px 0px 5px 3px rgba($blue, .2)
+    outline: none
+  &::-webkit-input-placeholder
+    font-size: 14px
+    font-family: inherit
+    color: $gray
+  &::-moz-placeholder
+    font-size: 14px
+    font-family: inherit
+    color: $gray
+  &:-ms-input-placeholder
+    font-size: 14px
+    font-family: inherit
+    color: $gray
+  &:-moz-placeholder
+    font-size: 14px
+    font-family: inherit
+    color: $gray
+
+.checkbox
+  position: relative
+  display: block
+  text-align: left
+  input
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+    opacity: 0
+    z-index: -1
+    &:checked + span
+      &:before
+        border-color: $blue
+      &:after
+        opacity: 1
+        transform: translateY(-50%) scale(1)
+  span
+    font-size: .85em
+    color: $dark
+    font-weight: 500
+    padding-left: 23px
+    display: block
+    cursor: pointer
+    &:before,
+    &:after
+      content: ''
+      display: inline-block
+      position: absolute
+      top: 50%
+      border-radius: 4px
+      transition: .25s all ease-in
+    &:before
+      width: 16px
+      transform: translateY(-50%)
+      height: 16px
+      left: 0
+      border: 1px solid $light
+    &:after
+      width: 8px
+      height: 8px
+      left: 4px
+      background-color: $blue
+      opacity: 0
+      transform: translateY(-50%) scale(0)
