@@ -14,7 +14,6 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use('/api', userApi);
 app.use('/api', taskApi);
-app.use(express.static('uploads'));
 app.use(express.static('./client/build'));
 
 mongoose.connect(DB, { useNewUrlParser: true }, err => {

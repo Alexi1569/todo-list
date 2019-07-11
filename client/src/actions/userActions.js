@@ -4,9 +4,6 @@ import { CREATE_USER, GET_USER, LOGOUT, TOGGLE_AUTH_SPINNER } from './types';
 import { SERVER_URL } from '../config';
 
 export const createUserAction = userData => dispatch => {
-  for (let key of userData.entries()) {
-    console.log(`${key[0]} - ${key[1]}`);
-  }
   return new Promise((resolve, reject) => {
     dispatch({
       type: TOGGLE_AUTH_SPINNER,

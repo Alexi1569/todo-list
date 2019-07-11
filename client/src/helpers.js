@@ -31,7 +31,6 @@ export const isEmptyObject = obj => {
 };
 
 export const validateResponse = (res, inputs) => {
-  console.log(res.data.errors);
   if (res.data.errors) {
     const { errors } = res.data;
 

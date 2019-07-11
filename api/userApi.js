@@ -66,9 +66,7 @@ router.post('/user', upload.single('photo'), async (req, res) => {
     const isFileExtensionValid = req.uploadError ? false : true;
 
     const isEmailEmpty = await findUserByEmail(email).then(res => res);
-    const photoToUpload = req.file
-      ? `${SERVER_URL}/${req.file.filename}`
-      : photo;
+    const photoToUpload = req.file ? req.file.url : photo;
 
     const user = new User({
       ...req.body,
