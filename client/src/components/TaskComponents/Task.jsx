@@ -13,7 +13,7 @@ const Task = ({ task, editButton, deleteButton, onTaskEdit, onTaskDelete }) => {
       <p className="task__description">{task.description}</p>
       <div className="task__bottom">
         <p className="task__status">
-          {task.isFinished ? 'Finished' : 'In process'}
+          {task.isFinished ? 'Finished' : 'Not finished'}
         </p>
         <div className="task__actions">
           <Button button={editButton} clickHandler={() => onTaskEdit(task)} />

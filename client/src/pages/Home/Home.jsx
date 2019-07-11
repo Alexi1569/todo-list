@@ -15,7 +15,7 @@ const Home = ({ isAuth }) => {
             </p>
           ) : (
             <p className="home__text-description">
-              Please, <Link to="/auth">login</Link> to begin
+              Please, <Link to="/auth">login or register</Link> to begin
             </p>
           )}
         </div>
