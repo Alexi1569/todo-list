@@ -26,7 +26,7 @@ const storage = cloudinaryStorage({
   filename(req, file, cb) {
     const extension = path.extname(file.originalname);
 
-    cb(null, `${file.fieldname}-${Date.now()}${extension}`);
+    cb(null, `${file.fieldname}-${Date.now()}`);
   }
 });
 

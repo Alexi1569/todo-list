@@ -2,6 +2,10 @@
 
 .header__nav
   font-size: .95em
+  &-logout
+    display: inline-flex
+    align-items: center
+    justify-content: flex-end
   ul
     display: flex
     align-items: center
@@ -31,6 +35,16 @@
     display: flex
     align-items: center
     justify-content: center
+    &-logout
+      flex-direction: column
+      justify-content: flex-start
+      align-items: center
+      .photo.photo--navigation
+        order: 1
+        margin-left: 0
+        margin-bottom: .35rem
+      p
+        order: 2
     &.active
       opacity: 1
       visibility: visible

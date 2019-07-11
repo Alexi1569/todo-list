@@ -92,10 +92,15 @@ class Layout extends React.Component {
   render() {
     const { isAuth } = this.state;
     const { user } = this.props;
+    const photo = user !== null ? user.photo : null;
 
     return (
       <div className="layout">
-        <Header logout={() => this.logoutHandler(user)} isAuth={isAuth} />
+        <Header
+          photo={photo}
+          logout={() => this.logoutHandler(user)}
+          isAuth={isAuth}
+        />
         <main className="main">
           <Route
             render={({ location }) => (

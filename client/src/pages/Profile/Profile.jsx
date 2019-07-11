@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Photo from '../../components/Photo/Photo';
 import './Profile.sass';
 
 const Profile = ({ user }) => {
@@ -10,12 +11,7 @@ const Profile = ({ user }) => {
     <section className="profile">
       <div className="container">
         <div className="profile__content">
-          <div
-            className="profile__photo"
-            style={{
-              backgroundImage: `url(${user.photo})`
-            }}
-          />
+          <Photo isProfilePhoto photo={user.photo} />
           <p className="profile__name">{user.name}</p>
           <p className="profile__email">{user.email}</p>
           <div className="profile__tasks">

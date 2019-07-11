@@ -5,7 +5,7 @@ import Toggler from '../Toggler/Toggler';
 import Navigation from '../Navigation/Navigation';
 import './Header.sass';
 
-const Header = ({ isAuth, logout }) => {
+const Header = ({ isAuth, logout, photo }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -23,6 +23,7 @@ const Header = ({ isAuth, logout }) => {
             isMenuOpen={isMenuOpen}
             logout={logout}
             isAuth={isAuth}
+            photo={photo}
           />
         </div>
       </div>
